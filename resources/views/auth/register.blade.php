@@ -45,11 +45,11 @@
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" method="POST" action="{{ route('register') }}">
-                        <h3 class="box-title m-b-20">Sign Up</h3>
+                        <h3 class="box-title m-b-20">S'inscrire</h3>
                         @csrf
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" type="text"  placeholder="Name" required>
+                                <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" type="text"  placeholder="Nom" required>
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                         </div>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input  class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}"  type="text" required="" placeholder="Username">
+                                <input  class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}"  type="text" required="" placeholder="nom d'utilisateur">
 
                                 @if ($errors->has('username'))
                                     <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
                         </div>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}"  type="text" required="" placeholder="Phone Number">
+                                <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}"  type="text" required="" placeholder="Numéro de téléphone">
 
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" role="alert">
@@ -93,7 +93,7 @@
                         </div>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" type="password" required="" placeholder="Password">
+                                <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" type="password" required="" placeholder="Mot de passe">
 
                                  @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -104,7 +104,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" name="password_confirmation" type="password" required="" placeholder="Confirm Password">
+                                <input class="form-control" name="password_confirmation" type="password" required="" placeholder="Confirmer mot de passe">
                             </div>
                         </div>
                         <?php
@@ -135,12 +135,12 @@
                         </div>
  -->                        <div class="form-group text-center p-b-20">
                             <div class="col-xs-12">
-                                <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" type="submit">Sign Up</button>
+                                <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" type="submit">S'inscrire</button>
                             </div>
                         </div>
                         <div class="form-group m-b-0">
                             <div class="col-sm-12 text-center">
-                                Already have an account? <a href="/login" class="text-info m-l-5"><b>Sign In</b></a>
+                                Vous avez déjà un compte? <a href="/login" class="text-info m-l-5"><b>Connectez-vous</b></a>
                             </div>
                         </div>
                     </form>

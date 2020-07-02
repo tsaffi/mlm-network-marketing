@@ -44,7 +44,7 @@
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" method="POST" action="{{ route('login') }}">
-                        <h3 class="box-title m-b-20">Sign In</h3>
+                        <h3 class="box-title m-b-20">Connexion</h3>
                         @csrf
                         <div class="form-group ">
                             <div class="col-xs-12">
@@ -82,19 +82,19 @@
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" name="remember" id="customCheck1" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="custom-control-label" for="customCheck1">Remember me</label>
-                                    <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a> 
+                                    <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Oublié mot de passe?</a> 
                                 </div> 
                             </div>
                         </div>
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">
-                                <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Log In</button>
+                                <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Connexion</button>
                             </div>
                         </div>
                    
                         <div class="form-group m-b-0">
                             <div class="col-sm-12 text-center">
-                                Don't have an account? <a href="/register" class="text-info m-l-5"><b>Sign Up</b></a>
+                                Vous n'avez pas de compte? <a href="/register" class="text-info m-l-5"><b>S'inscrire</b></a>
                             </div>
                         </div>
                     </form>
