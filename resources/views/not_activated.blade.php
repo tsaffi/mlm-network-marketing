@@ -1,17 +1,17 @@
 @extends('layouts.web')
 
-@section('title', "referrals not activated || e-earners")
+@section('title', "Références non activés || e-earners")
 
-@section('breadtitle', "Pending Activation")
+@section('breadtitle', "En attente Activation")
 
 @section('breadli')
-<li class="breadcrumb-item active">not activated</li>               
+<li class="breadcrumb-item active">non activé</li>               
 @endsection
 
 @section('content')
 <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Your referrals yet to activate</h4>
+                                <h4 class="card-title">Vos références en attente d'activation</h4>
                               
                                 <div class="table-responsive">
                                     <table id="myTable" class="table table-bordered table-striped">

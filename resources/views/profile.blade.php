@@ -1,8 +1,8 @@
 @extends('layouts.web')
 
-@section('title', "Profile || e-earners")
+@section('title', "Profil || e-earners")
 
-@section('breadtitle', "Profile")
+@section('breadtitle', "Profil")
 
 @section('breadli')
 <li class="breadcrumb-item active">profil</li>               
@@ -25,15 +25,15 @@
                             </div>
                             <div>
                                 <hr> </div>
-                            <div class="card-body"> <small class="text-muted">Email address </small>
-                                <h6>{{Auth::user()->email}}</h6> <small class="text-muted p-t-30 db">Phone</small>
-                                <h6>{{Auth::user()->phone}}</h6> <small class="text-muted p-t-30 db">Address</small>
+                            <div class="card-body"> <small class="text-muted">Adresse Email </small>
+                                <h6>{{Auth::user()->email}}</h6> <small class="text-muted p-t-30 db">Téléphone</small>
+                                <h6>{{Auth::user()->phone}}</h6> <small class="text-muted p-t-30 db">Adresse</small>
                                 <h6>{{Auth::user()->address ? Auth::user()->address : "Nil" }}</h6>
-                                <small class="text-muted p-t-30 db">State</small>
+                                <small class="text-muted p-t-30 db">État</small>
                                 <h6>{{Auth::user()->state ? Auth::user()->state : "Nil" }}</h6>
-                                <small class="text-muted p-t-30 db">Country</small>
+                                <small class="text-muted p-t-30 db">Pays</small>
                                 <h6>{{Auth::user()->country ? Auth::user()->country : "Nil" }}</h6>
-                                 <small class="text-muted p-t-30 db">Social Profile</small>
+                                 <small class="text-muted p-t-30 db">Profil Sociale</small>
                                 <br/>
                                 <button class="btn btn-circle btn-secondary"><i class="fa fa-facebook"></i></button>
                                 <button class="btn btn-circle btn-secondary"><i class="fa fa-twitter"></i></button>
@@ -57,32 +57,32 @@
                                         <form class="form-horizontal form-material" method="post" action="/profile/{{Auth::id()}}">
                                         @csrf
                                             <div class="form-group">
-                                                <label class="col-md-12">Full Name</label>
+                                                <label class="col-md-12">Nom complet</label>
                                                 <div class="col-md-12">
                                                     <input type="text" name="name" value="{{Auth::user()->name}}" placeholder="Johnathan Doe" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                           
                                             <div class="form-group">
-                                                <label class="col-md-12">Phone No</label>
+                                                <label class="col-md-12">Numero de téléphone</label>
                                                 <div class="col-md-12">
                                                     <input type="text" value="{{Auth::user()->phone}}" name="phone" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-12">Address</label>
+                                                <label class="col-md-12">Adresse</label>
                                                 <div class="col-md-12">
                                                     <input type="text" value="{{Auth::user()->address}}" name="address" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-12">State</label>
+                                                <label class="col-md-12">État</label>
                                                 <div class="col-md-12">
                                                     <input type="text" value="{{Auth::user()->state}}" name="state" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-12">Country</label>
+                                                <label class="col-md-12">Pays</label>
                                                 <div class="col-md-12">
                                                     <input type="text" value="{{Auth::user()->country}}" name="country" class="form-control form-control-line">
                                                     
@@ -90,7 +90,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                    <button class="btn btn-success">Update Profile</button>
+                                                    <button class="btn btn-success">Mettre le profil à jour</button>
                                                 </div>
                                             </div>
                                         </form>

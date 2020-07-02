@@ -21,7 +21,7 @@
 
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
-    <!-- Dashboard 1 Page CSS -->
+    <!-- Tableau de Bord 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -145,7 +145,7 @@
                             <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/images/users/default.png" alt="user" class=""> <span class="hidden-md-down">{{AUth::user()->username}} &nbsp;<i class="fa fa-angle-down"></i></span> </a>
                             <div class="dropdown-menu dropdown-menu-right animated flipInY">
                                 <!-- text-->
-                                <a href="/profile" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                                <a href="/profile" class="dropdown-item"><i class="ti-user"></i> Mon Profil</a>
                                 <!-- text-->
                                 <!-- <a href="/wallet" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> -->
                                 <!-- text-->
@@ -154,7 +154,7 @@
                                 <!-- text-->
                                 <div class="dropdown-divider"></div>
                                 <!-- text-->
-                                <a href="/logout" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <a href="/logout" class="dropdown-item"><i class="fa fa-power-off"></i> Déconnexion</a>
                                 <!-- text-->
                             </div>
                         </li>
@@ -185,23 +185,24 @@
                                 <li><a href="javascript:void(0)"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </li> -->
-                        <li class="nav-small-cap">--- PERSONAL</li>
+                        <li class="nav-small-cap">--- PERSONNELLE</li>
                         <li>
-                            <a class="waves-effect waves-dark" href="/home" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard </span></a>
+                            <a class="waves-effect waves-dark" href="/home" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Tableau de Bord </span></a>
                         </li>
                         <!-- <li> <a class="waves-effect waves-dark" href="/wallet" aria-expanded="false"><i class="ti-wallet"></i><span class="hide-menu">Wallet</span></a></li> -->
-                        <li> <a class=" has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Referrals</span></a>
+                        <li> <a class=" has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Références</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="/matrix">My Referrals</a></li>
-                                <li><a href="/not-activated">Pending Activation</a></li>
+                                <li><a href="/matrix">Mes Références</a></li>
+                                <li><a href="/not-activated">En attente d'activation</a></li>
                     
                             </ul>
                         </li>
                         
                         @if(Auth::user()->role == 'admin')
 
-                        <li class="nav-small-cap">--- ADMIN AREA</li>
-                        <li> <a class="waves-effect waves-dark" href="/pending" aria-expanded="false"><i class="fa fa-clock-o"></i><span class="hide-menu">Pending</span></a></li>
+                        <li class="nav-small-cap">--- ZONE ADMIN</li>
+                        <li> <a class="waves-effect waves-dark" href="/pending" aria-expanded="false"><i class="fa fa-clock-o"></i><span class="hide-menu">En attente</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="/all-users" aria-expanded="false"><i class="fa fa-clock-o"></i><span class="hide-menu">Tous les utilisateurs</span></a></li>
                        
 <!--                         <li> <a class="waves-effect waves-dark" href="/payment" aria-expanded="false"><i class="fa fa-rouble"></i><span class="hide-menu">Withdrawal Request</span></a>
                            
@@ -213,8 +214,8 @@
                            
                            </li>
  -->                        @endif
-                        <li class="nav-small-cap">--- OTHERS</li>
-                        <li> <a class="waves-effect waves-dark" href="/logout" aria-expanded="false"><i class="fa fa-power-off text-danger"></i><span class="hide-menu">Log Out</span></a></li>
+                        <li class="nav-small-cap">--- Autres</li>
+                        <li> <a class="waves-effect waves-dark" href="/logout" aria-expanded="false"><i class="fa fa-power-off text-danger"></i><span class="hide-menu">Deconnexion</span></a></li>
                        
                     </ul>
                 </nav>

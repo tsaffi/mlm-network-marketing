@@ -1,11 +1,11 @@
 @extends('layouts.web')
 
-@section('title', "Pending || e-earners")
+@section('title', "En attente d'activation || e-earners")
 
-@section('breadtitle', "Pending Activation")
+@section('breadtitle', "En attente d'activation")
 
 @section('breadli')
-<li class="breadcrumb-item active">pending</li>               
+<li class="breadcrumb-item active">En attente d'activation</li>               
 @endsection
 
 @section('content')
@@ -14,17 +14,17 @@
                 <!-- ============================================================== -->
                 <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Pending Users</h4>
-                                <h6 class="card-subtitle">Total Users: {{$allusers}} </h6>
-                                <h6 class="card-subtitle">Activated:  {{$activated}} </h6>
+                                <h4 class="card-title">Comptes en attente d'activation</h4>
+                                <h6 class="card-subtitle">Nombres d'utilisateurs: {{$allusers}} </h6>
+                                <h6 class="card-subtitle">Activé:  {{$activated}} </h6>
                                 <div class="table-responsive m-t-40">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Email</th>
-                                                <th>Username</th>
-                                                <th>Joined</th>
+                                                <th>nom d'utilisateur</th>
+                                                <th>Rejoint</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -45,7 +45,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="modal-title">Activate user</h4>
+                                                <h4 class="modal-title">Activer l'utilisateur</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                             </div>
                                             <form method="post" action="/activate-user">
@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-danger waves-effect waves-light">Activate User</button>
+                                                <button type="submit" class="btn btn-danger waves-effect waves-light">Activer l'utilisateur</button>
                                              
                                             </div>
                                             </form>

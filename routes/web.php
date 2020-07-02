@@ -91,3 +91,7 @@ Route::get('/checker', 'AdminController@checkUser');
 Route::get('/verify/{reference}', 'AdminController@verify');
 
 Route::get('/downlines', 'HomeController@downlines');
+
+Route::get('/all-users', 'AdminController@allUsers');
+
+Route::get('/delete-user/{id}', 'AdminController@deleteUser');

@@ -787,5 +787,24 @@ class AdminController extends Controller
 */
     }
 
-    
+    // show all users in the system
+    public function allUsers(){
+      $users = DB::table('users')->get();
+
+      return view('all-users')->with(['users' => $users]);
+    }
+
+    // delete a user
+    public function deleteUser(Request $request){
+
+      // dd($request->id);
+      // die();
+      if (DB::table('users')->where('id', $request->id)->delete()){
+        $request->session()->flash('success', 'L\'utilisateur à été supprimé avec succès'); 
+      }else{
+        $request->session()->flash('error', 'Une erreur est survenue'); 
+      }
+
+      return redirect()->back();
+    }
 }

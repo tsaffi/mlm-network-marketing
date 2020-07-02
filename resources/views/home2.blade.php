@@ -1,11 +1,11 @@
 @extends('layouts.web')
 
-@section('title', "Dashboard || e-earners")
+@section('title', "Tableau de Bord || e-earners")
 
-@section('breadtitle', "Dashboard")
+@section('breadtitle', "Tableau de Bord")
 
 @section('breadli')
-<li class="breadcrumb-item active">Dashboard</li>               
+<li class="breadcrumb-item active">Tableau de Bord</li>               
 @endsection
 
 @section('content')

@@ -19,8 +19,8 @@ class CreateUsersTreeTable extends Migration
             $table->unsignedBigInteger('descendant')->notNull();
             $table->integer('depth')->notNull(0);
 
-            $table->foreign('ancestor')->references('id')->on('users');//->onDelete('cascade');
-            $table->foreign('descendant')->references('id')->on('users');//->onDelete('cascade');
+            $table->foreign('ancestor')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('descendant')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

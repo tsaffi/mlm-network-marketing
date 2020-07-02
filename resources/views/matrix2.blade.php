@@ -134,7 +134,7 @@
             <div class="card-body">
                 <h4 class="card-title">
                     <span>Arbre</span>
-                    <span class="pull-right">Downlines - ({{$downlines_sum}})</span>
+                    <span class="pull-right">Descendances - ({{$downlines_sum}})</span>
                 </h4>
                 <div class="row">
                     <div class="tree">
