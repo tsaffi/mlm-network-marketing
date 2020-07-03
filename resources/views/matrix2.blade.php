@@ -137,15 +137,15 @@
                     <span class="pull-right">Descendances - ({{$downlines_sum}})</span>
                 </h4>
                 <div class="row">
-                    <div class="tree" style="width: 100%; overflow-x: scroll;">
+                    <div class="tree">
                         <ul>
                             <li>
                                 <div>{{Auth::user()->name}}</div>
                                 <?php
-                                    function tree($ancestor, $depth, $margin_left){
-                                        $downlines = DB::table('users')->select(DB::raw('users.*, users_tree.*'))
+                                    function tree($ancestor, $depth){
+                                        $downlines = DB::table('users')->select(DB::raw('users.*, users_tree.ancestor, users_tree.descendant, users_tree.depth'))
                                                         ->where(['users_tree.ancestor' => $ancestor, 'users_tree.depth' => 1])
-                                                        // ->where(['users_tree.ancestor' => , 'users_tree.depth' => $depth + 1])
+                                                        // ->where(['users_tree.ancestor' => $ancestor, 'users_tree.depth' => $depth + 1])
                                                         ->join('users_tree', 'users.id', '=', 'users_tree.descendant')
                                                         ->orderBy('users_tree.depth', 'ASC')
                                                         ->get();
@@ -155,11 +155,8 @@
                                             echo "<ul>";
                                             foreach ($downlines as $user){
                                                 echo "<li>";
-                                                $old_margin_left = $margin_left; // get the previous margin left
-                                                $margin_left = $margin_left / 2; // get the margin to which the left item is to be aligned
-                                                $margin_right = $margin_left + $old_margin_left; // get the margin to which the right item is to be aligned
                                                 echo '<div>'.$user->name.'</div>';
-                                                tree($user->id, $depth, $margin_left);
+                                                tree($user->id, $depth);
                                                 if ($i == $downlines->count()){
                                                     echo "</li>";
                                                 }
@@ -171,8 +168,7 @@
                                     }
                                     $depth = 1; // initialize the depth of the tree
                                     $ancestor = Auth::id(); // set the user as the ancestor
-                                    $margin_left = 40; // set the separation
-                                    tree($ancestor, $depth, $margin_left);
+                                    tree($ancestor, $depth);
                                 ?>
                             </li>
                         </ul>
