@@ -137,7 +137,7 @@
                     <span class="pull-right">Descendances - ({{$downlines_sum}})</span>
                 </h4>
                 <div class="row">
-                    <div class="tree">
+                    <div class="tree" style="overflow-x: scroll;">
                         <ul>
                             <li>
                                 <div>{{Auth::user()->name}}</div>
